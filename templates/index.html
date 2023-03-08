@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+</head>
+<body>
+    <form method="post">
+        <label for="domain_name">Enter a domain name or IP address here</label>
+        <br>
+        <input type="text" name="domain_name"
+               placeholder="IP address/domain name"
+               value="{{ form_entry }}"></input>
+        <br>
+               <button type="submit">Submit</button>
+    </form>
+    {% for key in details %}
+        <p><b>{{ key }}</b> : {{ details[key] }}</p>
+    {% endfor %}
+</body>
+</html>
